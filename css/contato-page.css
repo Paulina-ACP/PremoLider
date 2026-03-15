@@ -1,0 +1,453 @@
+:root {
+  --azul-industrial: #2c3e50;
+  --laranja-constr: #e67e22;
+  --verde-wp: #25d366;
+  --grafite: #333333;
+  --cinza-claro: #f8f9fa;
+  --borda-cinza: #e1e4e8;
+}
+
+.contato-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/hero-home.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--cor-branco);
+  text-align: center;
+  padding-top: var(--altura-header);
+}
+
+.contato-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.contato-hero-content {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.contato-hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--cor-branco);
+  letter-spacing: 1px;
+}
+
+.contato-hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.btn-whatsapp-hero {
+  display: inline-block;
+  padding: 16px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--laranja-constr);
+  color: var(--cor-branco);
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-whatsapp-hero:hover {
+  background-color: #cf6e1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+}
+
+.contato-intro {
+  padding: 60px 0;
+  text-align: center;
+  background-color: var(--cor-branco);
+}
+
+.contato-intro-container {
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contato-intro-title {
+  color: var(--azul-industrial);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.contato-intro-text {
+  font-size: 1.15rem;
+  color: var(--grafite);
+  line-height: 1.8;
+}
+
+.contato-principal {
+  padding: 40px 0 80px;
+  background-color: var(--cinza-claro);
+}
+
+.contato-principal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contato-info {
+  width: 100%;
+  background-color: var(--cor-branco);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--azul-industrial);
+}
+
+.contato-info h3 {
+  font-size: 1.8rem;
+  color: var(--azul-industrial);
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(44, 62, 80, 0.1);
+  color: var(--azul-industrial);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.info-icon.icon-wp {
+  background-color: rgba(37, 211, 102, 0.15);
+  color: var(--verde-wp);
+}
+
+.info-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.info-content h4 {
+  font-size: 1.1rem;
+  color: var(--grafite);
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.info-content p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.info-link-wp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: var(--verde-wp);
+  color: var(--cor-branco);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  margin-top: 5px;
+}
+
+.info-link-wp:hover {
+  background-color: #20b858;
+  transform: scale(1.02);
+}
+
+.icon-whatsapp-small {
+  width: 18px;
+  height: 18px;
+}
+
+.contato-form-wrapper {
+  width: 100%;
+  background-color: var(--cor-branco);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--laranja-constr);
+}
+
+.contato-form-wrapper h3 {
+  font-size: 1.8rem;
+  color: var(--azul-industrial);
+  margin-bottom: 30px;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--grafite);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--borda-cinza);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--laranja-constr);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+  background-color: var(--cor-branco);
+}
+
+.btn-submit {
+  padding: 16px;
+  background-color: var(--azul-industrial);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #1e2b38;
+  transform: translateY(-2px);
+}
+
+.mensagem-sucesso {
+  display: none;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 16px 20px;
+  border-left: 5px solid #4caf50;
+  border-radius: 6px;
+  margin-top: 25px;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 1.05rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contato-whatsapp-large {
+  background-color: var(--verde-wp);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contato-wp-container {
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contato-whatsapp-large h2 {
+  color: var(--cor-branco);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.btn-wp-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--cor-branco);
+  color: var(--verde-wp);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-wp-large:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.icon-whatsapp-large {
+  width: 28px;
+  height: 28px;
+}
+
+.contato-mapa {
+  width: 100%;
+  line-height: 0;
+}
+
+.contato-cta {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--cinza-claro);
+}
+
+.contato-cta-container {
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contato-cta h2 {
+  font-size: 2rem;
+  color: var(--azul-industrial);
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.contato-cta .cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.contato-cta .cta-buttons .btn {
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.contato-cta .cta-buttons .btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.contato-cta .btn-primary {
+  background-color: var(--laranja-constr);
+  color: var(--cor-branco);
+}
+
+.contato-cta .btn-whatsapp-cta {
+  background-color: var(--verde-wp);
+  color: var(--cor-branco);
+}
+
+.contato-cta .icon-whatsapp {
+  width: 22px;
+  height: 22px;
+}
+
+@media (min-width: 768px) {
+  .contato-hero-title {
+    font-size: 3.5rem;
+  }
+
+  .contato-info,
+  .contato-form-wrapper {
+    padding: 50px 40px;
+  }
+
+  .contato-cta .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contato-principal-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contato-info {
+    width: 40%;
+    order: 2;
+  }
+
+  .contato-form-wrapper {
+    width: 55%;
+    order: 1;
+  }
+
+  .contato-whatsapp-large h2 {
+    font-size: 2.5rem;
+  }
+
+  .contato-cta h2 {
+    font-size: 2.4rem;
+  }
+}

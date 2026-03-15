@@ -1,0 +1,142 @@
+.footer {
+  background-color: #1a252f;
+  color: #ecf0f1;
+  padding-top: 60px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: var(--peso-bold);
+  color: var(--cor-branco);
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-logo span {
+  color: var(--cor-secundaria);
+}
+
+.footer-desc {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.footer-title {
+  color: var(--cor-branco);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--cor-secundaria);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #bdc3c7;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--cor-secundaria);
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.icon-whatsapp {
+  stroke: #25d366;
+}
+
+.whatsapp-link:hover {
+  color: #25d366;
+  background-color: rgba(37, 211, 102, 0.1);
+  border-color: #25d366;
+}
+
+.instagram-link:hover {
+  color: #e1306c;
+  background-color: rgba(225, 48, 108, 0.1);
+  border-color: #e1306c;
+}
+
+.instagram-link:hover .icon-instagram {
+  stroke: #e1306c;
+}
+
+.footer-bottom {
+  background-color: #161f28;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    text-align: left;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .footer-link {
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+    text-align: left;
+  }
+}

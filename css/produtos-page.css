@@ -1,0 +1,358 @@
+.produtos-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/telaAlambrado.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--cor-branco);
+  text-align: center;
+  padding-top: var(--altura-header); /* Evita corte pelo header fixo */
+}
+
+.produtos-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* overlay escuro */
+}
+
+.produtos-hero-content {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  padding: 40px 20px;
+}
+
+.produtos-hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: var(--peso-bold);
+  color: var(--cor-branco);
+}
+
+.produtos-hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.produtos-hero .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+}
+
+.produtos-hero .btn:hover {
+  background-color: #d67118;
+  transform: translateY(-2px);
+}
+
+/* --- 2. INTRODUÇÃO DOS PRODUTOS --- */
+.produtos-intro {
+  padding: 60px 0;
+  text-align: center;
+  background-color: var(--cor-branco);
+}
+
+.produtos-intro-container {
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.produtos-intro-title {
+  color: var(--cor-primaria);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.produtos-intro-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.produtos-lista {
+  padding: 40px 0 80px;
+}
+
+.produtos-lista-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.produtos-lista .produto-card {
+  background-color: var(--cor-branco);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.produtos-lista .produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produtos-lista .card-img-wrapper {
+  height: 240px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.produtos-lista .card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.produtos-lista .produto-card:hover .card-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.produtos-lista .card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.produtos-lista .card-content h3 {
+  color: var(--cor-primaria);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.produtos-lista .card-content p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+.btn-card {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  width: 100%;
+}
+
+.btn-card:hover {
+  background-color: #cf6e1a;
+  transform: translateY(-2px);
+}
+
+.produtos-destaque {
+  padding: 80px 0;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+}
+
+.produtos-destaque-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.produtos-destaque-text {
+  width: 100%;
+}
+
+.produtos-destaque-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color: var(--cor-branco);
+}
+
+.destaque-subtitle {
+  font-size: 1.25rem;
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.destaque-beneficios {
+  list-style: none;
+  padding: 0;
+}
+
+.destaque-beneficios li {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.destaque-beneficios .icon-check {
+  color: var(--cor-secundaria);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.produtos-destaque-img {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.produtos-destaque-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.produtos-cta {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--cor-fundo);
+}
+
+.produtos-cta-container {
+  flex-direction: column;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.produtos-cta h2 {
+  font-size: 2.2rem;
+  color: var(--cor-primaria);
+  margin-bottom: 20px;
+}
+
+.produtos-cta p {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.cta-buttons .btn {
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.cta-buttons .btn-primary {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branco);
+}
+
+.cta-buttons .btn-whatsapp {
+  background-color: #25d366;
+  color: var(--cor-branco);
+}
+
+.btn-whatsapp svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .produtos-hero-title {
+    font-size: 3.2rem;
+  }
+
+  .produtos-lista-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cta-buttons .btn {
+    width: auto;
+    min-width: 280px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .produtos-hero {
+    min-height: 70vh;
+  }
+
+  .produtos-hero-title {
+    font-size: 4rem;
+  }
+
+  .produtos-lista-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .produtos-destaque-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .produtos-destaque-text {
+    width: 48%;
+  }
+
+  .produtos-destaque-img {
+    width: 48%;
+  }
+}

@@ -1,0 +1,260 @@
+.sobre-historia,
+.sobre-servicos,
+.sobre-diferenciais,
+.sobre-regiao {
+  padding: 4rem 0;
+}
+
+.sobre-historia,
+.sobre-diferenciais {
+  background-color: var(--cor-branco);
+}
+.sobre-servicos,
+.sobre-regiao {
+  background-color: var(--cor-fundo);
+}
+
+.sobre-historia .container,
+.sobre-regiao .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sobre-servicos .container,
+.sobre-diferenciais .container {
+  display: block;
+}
+
+.sobre-historia h2,
+.sobre-servicos h2,
+.sobre-diferenciais h2,
+.sobre-regiao h2 {
+  color: var(--cor-primaria);
+  font-size: var(--tamanho-h2);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.sobre-historia h2::after,
+.sobre-servicos h2::after,
+.sobre-diferenciais h2::after,
+.sobre-regiao h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--cor-secundaria);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+.lista-servicos,
+.lista-diferenciais {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+
+.lista-servicos li,
+.lista-diferenciais li {
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: var(--peso-bold);
+  transition: var(--transicao-suave);
+}
+
+.lista-servicos li:hover,
+.lista-diferenciais li:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-hero {
+  background:
+    linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+    url("../images/muroSobreNos.png") center/cover no-repeat;
+  padding: 6rem 0;
+  color: var(--cor-branco);
+  text-align: center;
+}
+
+.sobre-hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.badge-hero {
+  display: inline-block;
+  background-color: rgba(230, 126, 34, 0.2);
+  color: var(--cor-secundaria);
+  border: 1px solid var(--cor-secundaria);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: var(--tamanho-pequeno);
+  font-weight: var(--peso-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-hero h1 {
+  font-size: var(--tamanho-h1);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.sobre-hero p {
+  font-size: 1.125rem;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  História */
+.sobre-historia .container {
+  gap: 2rem;
+}
+.sobre-historia p {
+  color: var(--cor-texto);
+  font-size: var(--tamanho-p);
+  line-height: 1.8;
+  width: 100%;
+}
+
+/* Serviços  */
+.lista-servicos li {
+  background-color: var(--cor-branco);
+  border-left: 5px solid var(--cor-secundaria);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  color: var(--cor-primaria);
+}
+.lista-servicos li:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.lista-servicos li::before {
+  content: "✔";
+  color: var(--cor-secundaria);
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+/* Diferenciais */
+.lista-diferenciais li {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border-bottom: 5px solid var(--cor-secundaria);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: var(--peso-regular);
+  font-size: 1.05rem;
+}
+.lista-diferenciais li:hover {
+  background-color: #34495e;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.lista-diferenciais li::before {
+  content: "★";
+  color: var(--cor-secundaria);
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+/* Região */
+.sobre-regiao p {
+  color: var(--cor-texto);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  font-weight: 500;
+}
+.sobre-regiao p::before {
+  content: "📍 ";
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .sobre-historia,
+  .sobre-servicos,
+  .sobre-diferenciais,
+  .sobre-regiao {
+    padding: 5rem 0;
+  }
+  .sobre-historia p {
+    font-size: 1.1rem;
+    text-align: justify;
+    max-width: 800px;
+  }
+  .sobre-regiao p {
+    font-size: 1.2rem;
+    max-width: 700px;
+  }
+  .lista-servicos,
+  .lista-diferenciais {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .lista-servicos li,
+  .lista-diferenciais li {
+    width: calc(50% - 0.75rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sobre-historia,
+  .sobre-servicos,
+  .sobre-diferenciais,
+  .sobre-regiao {
+    padding: 6rem 0;
+  }
+  .sobre-historia .container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  .sobre-historia h2 {
+    text-align: left;
+    flex: 0 0 30%;
+    font-size: 2.5rem;
+  }
+  .sobre-historia h2::after {
+    margin: 12px 0 0 0;
+  }
+  .sobre-historia p {
+    flex: 1;
+    max-width: none;
+    border-left: 4px solid var(--cor-secundaria);
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  .lista-servicos li,
+  .lista-diferenciais li {
+    width: calc(33.333% - 1rem);
+    padding: 2rem 1.5rem;
+  }
+
+  .sobre-regiao p {
+    font-size: 1.25rem;
+    max-width: 800px;
+  }
+}
